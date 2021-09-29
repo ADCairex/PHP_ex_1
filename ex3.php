@@ -1,3 +1,4 @@
 <?php
-    echo 'Hola ' . $_GET['nombre'];
+    $name = $_GET['name'];
+    echo 'Hola '. $name;
 ?>  
