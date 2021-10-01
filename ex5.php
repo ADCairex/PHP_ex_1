@@ -15,12 +15,12 @@
                         echo 'no es un entero';
                     } elseif ($_POST['data']%2 == 0) {
                         echo $data . ' es par: los siguientes numeros son ';
-                        echo $data + 1 . ' y ';
-                        echo $data + 2;
+                        echo $data + 2 . ' y ';
+                        echo $data + 4;
                     } elseif ($_POST['data']%2 != 0) {
                         echo $data . ' es impar: los siguientes numeros son ';
-                        echo $data + 1 . ' y ';
-                        echo $data + 2;
+                        echo $data + 2 . ' y ';
+                        echo $data + 4;
                     }
                 }
             ?>
