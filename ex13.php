@@ -5,7 +5,7 @@
         <title>Ex 12</title>
     </head>
     <body>
-        <form action="ex12.php" method="get">
+        <form action="ex13.php" method="get">
             <p>Numero 1</p>
             <input type="text" name="num1" id="num1">
             <p>Operacion: (+, -, *, /, fact)</p>
@@ -22,48 +22,48 @@
 
                     $result = 1;
 
-                    function sum ($x, $y) {
+                    function sum($x, $y) {
                         $result = $x + $y;
                         return $result;
                     }
 
-                    function res ($x, $y) {
+                    function res($x, $y) {
                         $result = $x - $y;
                         return $result;
                     }
 
-                    function mult ($x, $y) {
+                    function mult($x, $y) {
                         $result = $x * $y;
                         return $result;
                     }
 
-                    function div ($x, $y) {
+                    function div($x, $y) {
                         $result = $x / $y;
                         return $result;
                     }
 
-                    function fact ($x) {
+                    function fact($x) {
                         for ($i = 1; $i <= $x; $i++) {
                             $result = $result * $x;
                         }
                         return $result;
                     }
 
-                    if ($operation == '+') {
-                        echo 'La suma de ' . $num1 . ' y ' . $num2 . ' es ' . sum($num1, $num2);
-                    } elseif ($operation == '-') {
-                        $result = $num1 - $num2;
-                        echo 'La resta de ' . $num1 . ' y ' . $num2 . ' es ' . res($num1, $num2);
-                    } elseif ($operation == '*') {
-                        $result = $num1 * $num2;
-                        echo 'La multiplicacion de ' . $num1 . ' y ' . $num2 . ' es ' . mult($num, $num2);
-                    } elseif ($operation == '/') {
-                        $result = $num1 / $num2;
-                        echo 'La division de ' . $num1 . ' y ' . $num2 . ' es ' . div($num1, $num2);
-                    } elseif ($operation == 'fact') {
-                        
-                        echo 'La suma de ' . $num1 . ' y ' . $num2 . ' es ' . fact($num1);
+                    function calculator($x, $y, $operator) {
+                        if ($operator == '+') {
+                            return 'La suma de ' . $x . ' y ' . $y . ' es ' . sum($x, $y);
+                        } elseif ($operator == '-') {
+                            return 'La resta de ' . $x . ' y ' . $y . ' es ' . res($x, $y);
+                        } elseif ($operator == '*') {
+                            return 'La multiplicacion de ' . $x . ' y ' . $y . ' es ' . mult($x, $y);
+                        } elseif ($operator == '/') {
+                            return 'La division de ' . $x . ' y ' . $y . ' es ' . div($x, $y);
+                        } elseif ($operator == 'fact') {                            
+                            return 'La suma de ' . $x . ' y es ' . fact($x);
+                        }
                     }
+
+                    echo calculator($num1, $num2, $operation);
                 }
             ?>
         </form>
